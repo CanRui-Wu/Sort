@@ -11,7 +11,7 @@ void mergeSortMain(T *array,T *sup_array,int length) {
 	int left = 0,right = mid+1;
 	for(int i = 0;i < length;i++)
 		sup_array[i] = array[i];
-	for(int i = 0;i < length;i++) {
+	for(int i = 0;i < length;i++) { //使用额外的空间合并两个有序的数组
 		if(right != length && sup_array[right] < sup_array[left] || left == mid+1) {
 			array[i] = sup_array[right];
 			right++;

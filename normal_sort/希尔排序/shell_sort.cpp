@@ -6,7 +6,7 @@ void shellSort(T *array,int length) {
 	if(array == NULL || length <= 1)
 		return;
 	int gap = length/2;
-	while(gap != 0) {
+	while(gap != 0) { //不断缩小增量，最后一次为1
 		for(int i = gap;i < length;i++) {
 			T temp = array[i];
 			int current = i;
